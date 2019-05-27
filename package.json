@@ -1,5 +1,5 @@
 {
-  "name": "strapi-sdk-javascript",
+  "name": "strapi-sdk-javascript-authing",
   "version": "0.3.1",
   "description": "The official Strapi SDK for JavaScript",
   "main": "build/main/index.js",

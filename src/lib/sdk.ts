@@ -7,7 +7,7 @@ export interface Authentication {
   jwt: string;
 }
 
-export type Provider = 'facebook' | 'google' | 'github' | 'twitter';
+export type Provider = 'facebook' | 'google' | 'github' | 'twitter' | 'authing';
 
 export interface ProviderToken {
   access_token?: string;
