@@ -214,7 +214,12 @@ export default class Strapi {
     this.clearToken();
     // Handling browser query
     if (this.isBrowser()) {
-      params = qs.parse(window.location.search, { ignoreQueryPrefix: true });
+      if (window.location.hash !== '') {
+        // For SinglePageApplication with hash routing
+        params = qs.parse(window.location.hash.split('?')[1]);
+      } else {
+        params = qs.parse(window.location.search, { ignoreQueryPrefix: true });
+      }
     }
     const authentication: Authentication = await this.request(
       'get',
